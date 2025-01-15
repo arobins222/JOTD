@@ -12,7 +12,10 @@ async function generateJoke() {
     },
   };
 
-  const res = await fetch('https://icanhazdadjoke.com', config);
+  const res = await fetch(
+    `https://icanhazdadjoke.com?id=${Math.random()}`,
+    config
+  );
 
   const data = await res.json();
 
